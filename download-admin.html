@@ -8,18 +8,27 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #1a6b3c 0%, #0d3d2f 100%);
+      background: #0d3d2f;
       color: #1d1d1f;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+    body.password-bg {
+      background: url('cousin-island-view2.jpg') center center / cover no-repeat fixed;
+      align-items: center;
+    }
+    body.download-bg {
+      background: url('cousin-island-view2.jpg') center center / cover no-repeat fixed;
+      align-items: flex-start;
+    }
 
     /* Password screen */
     .password-screen {
       text-align: center;
       padding: 40px;
+      margin-top: -80px;
     }
     .password-screen .lock-icon {
       font-size: 48px;
@@ -80,11 +89,12 @@
       display: none;
       width: 100%;
       max-width: 900px;
-      padding: 40px 20px;
+      padding: 60px 20px 40px 20px;
     }
     .app-header {
       text-align: center;
       margin-bottom: 48px;
+      margin-top: 60px !important;
     }
     .app-icon-main {
       width: 96px;
@@ -255,8 +265,8 @@
 
   <!-- Password Gate -->
   <div id="passwordScreen" class="password-screen">
-    <div class="lock-icon">&#128274;</div>
-    <h2>Cousin Island ARM</h2>
+    <img src="icon.png" alt="ARM Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
+    <h2>App for Reserve Management</h2>
     <p>Enter the password to access downloads</p>
     <div class="password-input-wrapper">
       <input type="password" id="passwordInput" placeholder="Password" onkeydown="if(event.key==='Enter')checkPassword()">
@@ -267,14 +277,10 @@
 
   <!-- Download Page -->
   <div id="downloadScreen" class="download-screen">
-    <div class="app-header">
-      <div class="app-icon-main">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-        </svg>
-      </div>
-      <h1>Cousin Island ARM</h1>
-      <h3>Field Work App</h3>
+    <div class="app-header" style="margin-top: 60px !important;">
+      <img src="icon.png" alt="ARM Logo" style="width: 96px; height: auto; margin-bottom: 16px;">
+      <h1>App for Reserve Management</h1>
+      <h3>Conservation Field Work App</h3>
       <p>Download the app for your platform</p>
     </div>
 
@@ -390,6 +396,7 @@
         document.getElementById('passwordScreen').style.display = 'none';
         document.getElementById('downloadScreen').style.display = 'block';
         sessionStorage.setItem('arm_dl_auth', '1');
+        updateBackground();
       } else {
         document.getElementById('errorMsg').style.display = 'block';
         document.getElementById('passwordInput').value = '';
@@ -414,11 +421,21 @@
       }
     }
 
+    // Set background based on current screen
+    function updateBackground() {
+      if (document.getElementById('downloadScreen').style.display === 'block') {
+        document.body.className = 'download-bg';
+      } else {
+        document.body.className = 'password-bg';
+      }
+    }
+
     // Keep session alive
     if (sessionStorage.getItem('arm_dl_auth') === '1') {
       document.getElementById('passwordScreen').style.display = 'none';
       document.getElementById('downloadScreen').style.display = 'block';
     }
+    updateBackground();
 
     // Fetch version.json from Supabase and populate download links
     async function loadVersionInfo() {
