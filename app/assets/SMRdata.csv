@@ -1,0 +1,76 @@
+;;;;;;;;;
+;T;Right;Left- Top;Left- Bottom;T;B;SAFring;Status;M/F
+;1A;X/R;New Green;New Green;Ng;Ng;4A92210;D-adult;M
+;1A;X/R;Green;Green;G;G;4A92202;Adult;F
+;1A;X/M;Shock Pink;Blue;Sp;B;4A92211;Adult;M
+;1A;X/M;Orange;White;O;W;4A92225;Adult;F
+;1A;X/R;Black ;Red;Bk;R;4A78449;Juvenile;
+;1B;X/R;Yellow;Violet;Y;V;4A22285;D-adult;M
+;1B;X/R;Red;Blue;R;B;4A92208;D-adult;M
+;1B;X/R;Grey;Blue;Gy;B;4A94576;Fledgling;
+;1B;X/R;Sky Blue;Shock Green;S;Sg;4A94554;Juvenile;J
+;1B;X/R;Blue;Orange;B;O;4A92235;S-adult;F
+;1B;X/R;Black;Blue;Bk;B;4A94572;Juvenile;J
+;1B;X/R;Red;White;R;W;4A92218;S-adult;F
+;1B;X/R;Shock Green;Yellow;Sg;Y;4A94568;Juvenile;J
+;1C;X/R;Orange;Blue;O;B;4A64092;D-adult;F
+;1C;X/R;Shock Pink;Shock Pink;Sp;Sp;4A78549;Adult;F
+;1C;X/R;Blue;Yellow;B;Y;4A92239;Juvenile;J
+;1C;X/R;Yellow;Dark Green;Y;Z;4A78448;Juvenile;J
+;1C;X/R;New Green;Red;NG;R;4A78501;Adult;M
+;1C;X/R;Violet;Red;V;R;4A94578;Juvenile;
+;1C;X/R;Orange;Yellow;O;Y;4A94577;Juvenile;
+;1C;X/R;Shock Pink;Violet;Sp;V;4A95567;Juvenile;
+;1D;X/R;Green;Yellow;G;Y;4A22261;D-adult;F
+;1D;X/R;Violet;Sky Blue;V;W;4A92214;Adult;F
+;1D;X/R;Orange;Red;O;R;4A92205;Adult;M
+;1D;X/R;New Green;Orange;NG;O;4A92228;Juvenile;J
+;1D;X/R;Shock Pink;New Green;Sp;Ng;4A94563;Fledgling;
+;VP;X/R;Green;Blue;G;B;4A64095;D-adult;M
+;VP;X/R;Magenta;Light Green;M;Lg;4A52079;D-adult;F
+;VP;X/R;Red;Red;R;R;4A94501;Adult;M
+;VP;X/R;Green;White;G;W;4A92230;Adult;F
+;VP;X/R;White;Black;W;Bk;4A92236;Adult;J
+;VP;X/R;Blue;Shock Pink;B;Sp;4A92238;Adult;J
+;VP;X/R;Dark Green;Shock Pink;Z;Sp;4A78445;Juvenile;J
+;VP;X/R;Shock Green;Grey;Sg ;Gy;4A94569;Juvenile;
+;VP;X/R;Yellow ;Black;Y;Bk;4A94575;Juvenile;
+;VP;X/R;Shock Pink;Orange;Sp;O;4A94561;Juvenile;J
+;2A;X/R;Black;Orange;Bk;O;4A64094;Adult;F
+;2A;X/R;Shock Pink;Violet;Sp;V;4A92223;Adult;F
+;2A;X/R;New Green;White;Ng;W;4A92231;Adult;F
+;2A;X/R;Blue;White;B;W;4A92237;Adult;
+;2A;X/R;New Green;Violet;Ng;V;4A92243;Adult;
+;2A;X/R;New Green;Shock Pink;Ng;Sp;4A94566;Juvenile;J
+;2A;X/R;Shock green;Orange;Sg;O;4A94570;;
+;2A;X/R;Orange;Orange;O;O;TBD;;
+;2B;X/R;Orange;Shock Pink;O;Sp;4A52077;D-adult;F
+;2B;X/R;Yellow;Brown;Y;Bn;4A78503;D-adult;
+;2B;X/R;Red;Yellow;R;Y;4A92221;Adult;
+;2B;X/R;White;Violet;W;V;4A78444;Juvenile;
+;2B;X/R;Violet;Shock Green;V;Sg;4A94557;Fledgling;
+;2B;X/R;Violet;Shock Pink;V;Sp;4A94571;Pullus;
+;3A;X/R;Black;Green;Bk;G;4A22250;D-adult;F
+;3A;X/R;Dark Green;Yellow;Y;V;4A52059;Adult;
+;3A;X/R;Red;Sky Blue;R;S;4A78550;Adult;M
+;3A;X/M;Black;Violet;Bk;V;4A92212;Adult;F
+;3A;X/M;White;White;W;W;4A92213;Adult;F
+;3A;X/R;New Green;Sky Blue;Ng;S;4A94562;Pullus;P
+;3B;X/R;White;Shock Pink;W;Sp;4A78508;D-adult;M
+;3B;X/R;Grey;Violet;Gy;V;4A66604;D-adult;M
+;3B;X/R;Yellow;Dark Green;Y;Z;4A22297;Adult;F
+;3B;X/R;Black;Black;Bk;Bk;4A94574;Juvenile;J
+;3B;X/R;Sky Blue;Sky Blue;S;S;4A94565;Juvenile;J
+;3B;X/R;White;Yellow;W;Y;4A92226;Juvenile;J
+;3B;X/R;Red;Orange;R;O;4A94564;Fledgling;
+;4A;X/M;Shock Pink;Yellow;Sp;Y;4A92209;Adult;M
+;4A;X/R;Green;Red;G;R;4A52067;Adult;F
+;4A;X/R;Shock Pink;Green;Sp;G;4A92201;Adult;F
+;4A;X/M;Black;Yellow;Bk;Y;4A92224;Adult;F
+;4A;X/R;Violet;Blue;V;B;4A92216;Adult;F
+;4B;X/R;Red;Violet;R;V;4A64098;D-adult;F
+;4B;X/R;Yellow;Blue;Y;B;4A52072;D-adult;M
+;4B;X/R;New Green;Yellow;Ng;Y;4A92233;Adult;M
+;4B;X/R;Sky Blue;Shock Pink;S;Sp;4A92241;Juvenile;J
+;4B;X/R;New green;Blue;Ng;B;4A92232;Adult;
+;4B;X/R;Orange;New Green;O;Ng;4A78447;Adult;
