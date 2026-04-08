@@ -1,0 +1,2 @@
+# Google Cloud service account credentials (leaked from src/assets during PWA build)
+**/cousin-island-app-*.json
