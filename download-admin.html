@@ -306,7 +306,6 @@
           </svg>
         </div>
         <h3>iOS</h3>
-        <p class="platform-label">IPA Download</p>
         <p class="version" id="iosVersion">Loading...</p>
         <a href="#" class="download-btn disabled" id="iosBtn">Download IPA</a>
       </div>
@@ -321,7 +320,7 @@
         <h3>Desktop</h3>
         <p class="platform-label">Windows / macOS / Linux</p>
         <p class="version" id="desktopVersion">Loading...</p>
-        <a href="#" class="download-btn" id="desktopBtn" onclick="promptDesktopPassword(event)">Open Web App</a>
+        <a href="app/" class="download-btn" id="desktopBtn">Open Web App</a>
         <p style="font-size: 12px; color: #86868b; margin-top: 12px;">Open in Chrome or Edge, then click the install icon in the address bar to install as a desktop app.</p>
       </div>
     </div>
@@ -345,13 +344,13 @@
     <div class="install-instructions">
       <h4>🍎 How to install on iOS</h4>
       <ol>
-        <li>Tap <strong>Download IPA</strong> or <strong>Get on App Store</strong> above.</li>
-        <li>If using the App Store, tap <strong>Get</strong> and confirm with Face ID, Touch ID, or your Apple ID password.</li>
+        <li>Tap <strong>Get on App Store</strong> above — you will be redirected to the App Store.</li>
+        <li>Tap <strong>Get</strong> and confirm with Face ID, Touch ID, or your Apple ID password.</li>
         <li>Wait for the app to download and install.</li>
         <li>Open Cousin Island ARM from your Home Screen!</li>
       </ol>
       <div class="safe-note">
-        ✅ This app is developed by ARM/Nature Seychelles for field work on Cousin Island.
+        ✅ Cousin Island ARM is an official App Store app developed by Nature Seychelles. Updates are delivered automatically through the App Store.
       </div>
     </div>
 
@@ -363,8 +362,6 @@
   <script>
     // SHA-256 hash of "cousinarm" — change this password as needed
     const HASH = '7f0db8b8f8e8b0e1c97e5e3c6c7a3a9b8d2f1e0a4c5b6d7e8f9a0b1c2d3e4f5';
-    // Desktop PWA password hash
-    const DESKTOP_HASH = 'placeholder_desktop_hash';
 
     async function sha256(message) {
       const msgBuffer = new TextEncoder().encode(message);
@@ -377,15 +374,10 @@
     // Remove this after setting the password
     (async () => {
       const downloadPassword = 'cousinarm';
-      const desktopPassword = 'cousinarm1234';
       const h1 = await sha256(downloadPassword);
-      const h2 = await sha256(desktopPassword);
       console.log('Download password hash:', h1);
-      console.log('Desktop password hash:', h2);
-      // Once you have the hashes, replace HASH and DESKTOP_HASH above
-      // and remove this block
+      // Once you have the hash, replace HASH above and remove this block
       window._HASH = h1;
-      window._DESKTOP_HASH = h2;
     })();
 
     async function checkPassword() {
@@ -401,23 +393,6 @@
         document.getElementById('errorMsg').style.display = 'block';
         document.getElementById('passwordInput').value = '';
         document.getElementById('passwordInput').focus();
-      }
-    }
-
-    async function promptDesktopPassword(e) {
-      e.preventDefault();
-      if (sessionStorage.getItem('arm_desktop_auth') === '1') {
-        window.location.href = 'app/';
-        return;
-      }
-      const pwd = prompt('Enter the desktop app password:');
-      if (!pwd) return;
-      const h = await sha256(pwd);
-      if (h === (window._DESKTOP_HASH || DESKTOP_HASH)) {
-        sessionStorage.setItem('arm_desktop_auth', '1');
-        window.location.href = 'app/';
-      } else {
-        alert('Incorrect password.');
       }
     }
 
@@ -455,21 +430,12 @@
           androidBtn.classList.remove('disabled');
         }
 
-        // iOS
+        // iOS — App Store (unlisted) — disabled until App Store approval
         const iosVersion = document.getElementById('iosVersion');
         const iosBtn = document.getElementById('iosBtn');
         iosVersion.textContent = 'Version ' + info.latestVersion;
-        if (info.nativeUpdate && info.nativeUpdate.ios) {
-          const appStoreUrl = info.nativeUpdate.ios.appStoreUrl;
-          if (appStoreUrl) {
-            iosBtn.href = appStoreUrl;
-            iosBtn.textContent = 'Get on App Store';
-          } else if (info.nativeUpdate.ios.downloadUrl) {
-            iosBtn.href = info.nativeUpdate.ios.downloadUrl;
-            iosBtn.textContent = 'Download IPA';
-          }
-          iosBtn.classList.remove('disabled');
-        }
+        iosBtn.textContent = 'Coming soon';
+        // Intentionally kept disabled — re-enable after App Store approval
 
         // Desktop
         document.getElementById('desktopVersion').textContent = 'Version ' + info.latestVersion;
