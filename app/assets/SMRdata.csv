@@ -4,7 +4,7 @@ T;Right;Left- Top;Left- Bottom;T;B;SAFring;Status;M/F
 1A;X/R;Sky Blue;Violet;S;V;4A94583;Juvenile;
 1A;X/R;Grey;Grey;Gy;Gy;4A94589;Juvenile;J
 1A;X/R;Grey;Sky Blue;Gy;S;TEMP1;Fledgling;
-1A;X;Black ;Red;Bk;R;4A78449;Adult;
+1A;X;Black;Red;Bk;R;4A78449;Adult;
 1B;X/R;Red;Blue;R;B;4A92208;D-adult;M
 1B;X/R;Sky Blue;Shock Green;S;Sg;4A94554;Juvenile;J
 1B;X/R;Blue;Orange;B;O;4A92235;D-adult;F
@@ -26,7 +26,7 @@ T;Right;Left- Top;Left- Bottom;T;B;SAFring;Status;M/F
 VP;X/R;Magenta;Light Green;M;Lg;4A52079;D-adult;F
 VP;X/R;Violet;Orange;V;O;4A94588;Adult;
 VP;X/R;Red;Red;R;R;4A94501;Adult;M
-VP;X/R;Shock Green;Grey;Sg ;Gy;4A94569;Juvenile;
+VP;X/R;Shock Green;Grey;Sg;Gy;4A94569;Juvenile;
 VP;X/R;Blue;Shock Pink;B;Sp;4A92238;Adult;
 2A;X/R;Orange;Shock Pink;O;Sp;4A52077;D-adult;F
 2A;X/R;Blue;White;B;W;4A92237;Adult;
