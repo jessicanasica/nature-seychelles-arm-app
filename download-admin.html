@@ -306,8 +306,9 @@
           </svg>
         </div>
         <h3>iOS</h3>
+        <p class="platform-label">App Store</p>
         <p class="version" id="iosVersion">Loading...</p>
-        <a href="#" class="download-btn disabled" id="iosBtn">Download IPA</a>
+        <a href="https://apps.apple.com/app/cousin-island-arm/id6762517243" class="download-btn" id="iosBtn" target="_blank">Get on Apple Store</a>
       </div>
 
       <!-- Desktop (PWA) -->
@@ -430,12 +431,13 @@
           androidBtn.classList.remove('disabled');
         }
 
-        // iOS — App Store (unlisted) — disabled until App Store approval
+        // iOS — App Store
         const iosVersion = document.getElementById('iosVersion');
         const iosBtn = document.getElementById('iosBtn');
         iosVersion.textContent = 'Version ' + info.latestVersion;
-        iosBtn.textContent = 'Coming soon';
-        // Intentionally kept disabled — re-enable after App Store approval
+        if (info.nativeUpdate && info.nativeUpdate.ios && info.nativeUpdate.ios.appStoreUrl) {
+          iosBtn.href = info.nativeUpdate.ios.appStoreUrl;
+        }
 
         // Desktop
         document.getElementById('desktopVersion').textContent = 'Version ' + info.latestVersion;
