@@ -1,6 +1,6 @@
 {
   "name": "cousin-island-field-work-2",
-  "version": "3.9.6",
+  "version": "3.9.7",
   "main": "main.js",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -14,7 +14,7 @@
     "electron": "electron .",
     "clean": "rimraf dist",
     "package": "npm run clean && electron-builder",
-    "postinstall": "electron-rebuild"
+    "postinstall": "patch-package && electron-rebuild"
   },
   "private": true,
   "dependencies": {
@@ -147,6 +147,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "patch-package": "^8.0.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.4.5"
   },
